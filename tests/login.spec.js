@@ -33,12 +33,15 @@ test('Positive Test - Valid login', async ({ page }) => {
 
   await page.getByPlaceholder('Password').fill('Ritesh@1234');
 
- await page.getByTestId('SI-submit-button-show').click();
-  // Verify successful login (giving enough time for API response)
-  await expect(page).toHaveURL('https://platform.baap.company/choose-group', { timeout: 15000 });
-  await page.getByPlaceholder('Search organizations').fill('Baap Demo Account');
-  await page.getByTestId('CG-org-card-f93b85d2-8b9c-4c41-9746-395e9d93cfa3').click();
-  await expect(page).toHaveURL('https://platform.baap.company/dashboard', { timeout: 15000 });
-// Click on Assignment menu
-await page.getByTestId('menu-item-assignment').click();
+  await page.getByTestId('SI-submit-button-show').click();
+  // Verify successful login
+  await expect(page).toHaveURL('https://platform.baap.company/choose-group');
+  await page.getByPlaceholder('Search organizations')
+    .fill('Baap Demo Account');
+  await page.getByTestId(
+    'CG-org-card-f93b85d2-8b9c-4c41-9746-395e9d93cfa3'
+  ).click();
+  await expect(page).toHaveURL('https://platform.baap.company/dashboard');
+  // Click on Assignment menu
+  await page.getByTestId('menu-item-assignment').click();
 });

@@ -3,15 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "playwright test",
-    "test:login": "playwright test tests/login.spec.js",
-    "test:attendance": "playwright test tests/attendance.spec.js",
-    "test:leave": "playwright test tests/leave-management.spec.js",
-    "test:hrms": "playwright test tests/hrms-dashboard.spec.js",
-    "test:headed": "playwright test --headed",
-    "report": "playwright show-report"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
