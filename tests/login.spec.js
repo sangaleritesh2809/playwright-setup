@@ -1,6 +1,6 @@
 
 import { test, expect } from '@playwright/test';
-/*
+
 test('Negative Test - Both fields empty', async ({ page }) => {
   await page.goto('https://platform.baap.company/');
 
@@ -10,9 +10,9 @@ test('Negative Test - Both fields empty', async ({ page }) => {
 
  await page.getByTestId('SI-submit-button-show').click();
  await expect(page).toHaveURL('https://platform.baap.company/choose-group');
-});*/
+});
 
-/*test('Negative Test - Email entered, password empty', async ({ page }) => {
+test('Negative Test - Email entered, password empty', async ({ page }) => {
   await page.goto('https://platform.baap.company/');
 
   await page.getByPlaceholder('Enter your email or phone number').fill('sangaleritesh2809+1@gmail.com');
@@ -24,7 +24,7 @@ test('Negative Test - Both fields empty', async ({ page }) => {
   // Verify that login page remains visible
    await expect(page).toHaveURL('https://platform.baap.company/choose-group');
 });
-*/
+
 test('Positive Test - Valid login', async ({ page }) => {
   await page.goto('https://platform.baap.company/');
 
